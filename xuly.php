@@ -28,6 +28,11 @@
         }
         mysqli_query($mysqli, $sql_update);
         header('Location:index.php?action=quanlysinhvien&query=them');
+    }else if(isset($_POST['timkiem'])){
+        $tukhoa = $_POST['tukhoa'];
+        $sql_timkiem = "SELECT * FROM sinhvien.sinh_vien WHERE id = '".$tukhoa."' ";
+        mysqli_query($mysqli, $sql_timkiem);
+        header('Location:index.php?action=quanlysinhvien&query=timkiem');
     }else {
         $id = $_GET['id'];
         $sql_xoa = "DELETE FROM sinhvien.sinh_vien WHERE id = '".$id."'";
