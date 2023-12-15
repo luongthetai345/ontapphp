@@ -1,0 +1,1 @@
+<a href="index.php?action=quanlysinhvien&query=them">Quản lý sinh viên</a>
